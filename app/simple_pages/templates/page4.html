@@ -1,4 +1,87 @@
-{% extends "base.html" %}
-{% block content %}
-    Page 4
-{% endblock %}
+    {% extends "base.html" %}
+    {% block content %}
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><span class="text-warning">Project</span>1</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page1')}}">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page2')}}">Docker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page3')}}">Python/Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page4')}}">Continuous Integration and Deployment</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="clearfix">
+      <img src="{{ url_for('static', filename='images/ci-cd2.jpg') }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+
+      <p>
+        <h1> Project setup for github:Step by Step</h1>
+
+         For Continuous Integration and Deployment
+      <ul>
+        <li>Clone this repo to your local</li>
+        <li>Create a new repo on your own Github account</li>
+        <li>Change the origin by replacing it with your own new repo. (Do not add a readme or any other file while creating the repository)</li>
+        <li>Create an account with Heroku, create an app for production and an app for development</li>
+        <li>Create a new repo in Docker hub</li>
+
+     </ul>
+
+          The following steps will automatically trigger the Production workflow that is in the prod.yml after any changed is committed on Github.
+
+      </p>
+
+
+       <p>
+        <h1>Code review using dev server:</h1>To reveiw code before merging pull requests you will navigate to 'actions'
+        then on the left you should see all your Workflows including the Development workflow and the details.
+      </p>
+
+      <p>
+        <h1>How to deploy master to production server: Step by Step</h1>
+      <ul>
+        <li>Create a bare repo: Make sure you are allowed to write to it</li>
+        <li>Create a file to recieve</li>
+        <li>Configure your local repo to push to the server</li>
+        <li>The goal is when you run git push, deploy the latest master branch to the server</li>
+
+     </ul>
+      </p>
+
+    <p>
+        <h1>Deployment of Image to Dockerhub when master is updated:</h1>
+    <ul>
+      <li>Step 1:You must configure your automated build settings first.</li>
+      <li>Step 2: From the Repositories section, click into a repository to view its details.</li>
+      <li>Step 3: Click the Builds tab.</li>
+      <li>Step 4: If you are setting up automated builds for the first time, select the code repository service (GitHub or Bitbucket)
+          where the image’s source code is stored. You may be redirected to the settings page to link the code repository service.
+          Otherwise, if you are editing the build settings for an existing automated build, click Configure automated builds.</li>
+      <li>Step 5:Select the source repository to build the Docker images from. You might need to specify an organization or user
+          (the namespace) from the source code provider. Once you select a namespace, its source code repositories appear
+          in the Select repository dropdown list.</li>
+      <li>Step 6:Optionally, enable autotests.</li>
+      <li>Step 7: Review the default Build Rules, and optionally click the plus sign to add and configure more build rules.</li>
+      <li>Step 8: For each branch or tag, enable or disable the Autobuild toggle.</li>
+      <li>Step 9:For each branch or tag, enable or disable the Build Caching toggle.</li>
+      <li>Step 10:Click Save to save the settings, or click Save and build to save and run an initial <test class=""></test></li>
+
+    </ul>
+      </p>
+
+
+
+    {% endblock %}
