@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><span class="text-warning">Project</span>1</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page1')}}">GitHub</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page2')}}">Docker</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page3')}}">Python/Flask</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page4')}}">Continuous Integration and Deployment</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<div class="clearfix">
+  <img src="{{ url_for('static', filename='images/pythonflask2.png') }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+
+  <p>
+    <h1> Pytest testing: Step by Step</h1>
+    <ul>
+      <li>Step 1: Open your project in Pycharm</li>
+      <li>Step 2: Click on the dropdown menu dialog next to the Play button on the top right of Pycharm</li>
+      <li>Step 3: Click your Project name ex:"project1flask"</li>
+      <li>Step 4: Click the play button to run container</li>
+      <li>Step 5: Navigate to services on the bottom middle of Pycharm and you should see your container running</li>
+      <li>Step 6: On the left Navigate to locate your Project folder</li>
+      <li>Step 7: Right Click on your project folder and select create terminal</li>
+      <li>Step 8: On the right run in the services terminal 'pip install pytest-cov</li>
+      <li>Step 9:Then run 'pip install pytest-pylint</li>
+      <li>Step 10:Then run'pip install pytest --pylint --cov</li>
+      <li>Step 11: Whatever failed tests you get, fix them.</li>
+    </ul>
+  </p>
+
+
+
+    <p>
+    <h1>Creation of simple pages:</h1>I created simplepages by inputting my index.html, base.html, style.css, init.py and my content pages
+  </p>
+
+
+{% endblock %}

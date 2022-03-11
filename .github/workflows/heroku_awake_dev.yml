@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: mikeesto/heroku-awake@1.0.0
         with:
-          URL: "https://iua6-dev.herokuapp.com/"
+          URL: "https://iua6-dev2.herokuapp.com/"

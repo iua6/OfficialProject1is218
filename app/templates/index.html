@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+   <body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#"><span class="text-warning">Project</span>1</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page1')}}">GitHub</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page2')}}">Docker</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page3')}}">Python/Flask</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('simple_pages.show', page='page4')}}">Continuous Integration and Deployment</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+		<div class="carousel-inner">
+			<div class="carousel-item active bg-1">
+				<div class="carousel-caption">
+					<h5>About Me<span class="text-warning">:Ikechukwu Anyanwu</span></h5>
+                    <center><p>.</p></center>
+
+				</div>
+			</div>
+			<div class="carousel-item bg-2">
+				<div class="carousel-caption">
+					<h5>GitHub <span class="text-warning"></span></h5>
+					<p></p>
+                    <a class="bg-warning text-white" href="{{ url_for('simple_pages.show', page='page1')}}">Learn More</a>
+                    <center><img src="{{ url_for('static', filename='images/github.png') }}" class="d-block w-50" height="200" alt="Picture of the git logo"></center>
+				</div>
+			</div>
+			<div class="carousel-item bg-3">
+				<div class="carousel-caption">
+					<h5>Docker<span class="text-warning"></span></h5>
+					<p></p>
+                    <a class="bg-warning text-white" href="{{ url_for('simple_pages.show', page='page2')}}">Learn More</a>
+                    <center><img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-50" height=200" alt="Picture of the git logo"</center>
+				</div>
+			</div>
+      <div class="carousel-item bg-4">
+				<div class="carousel-caption">
+					<h5>Python/Flask<span class="text-warning"></span></h5>
+					<p></p>
+                    <a class="bg-warning text-white" href="{{ url_for('simple_pages.show', page='page3')}}">Learn More</a>
+                    <center><img src="{{ url_for('static', filename='images/pythonflask.jpg') }}" class="d-block w-50" height="175" alt="Picture of the git logo"></center>
+				</div>
+			</div>
+      <div class="carousel-item bg-3">
+				<div class="carousel-caption">
+					<h5>Continuous Integration and Deployment<span class="text-warning"></span></h5>
+					<p></p>
+                    <a class="bg-warning text-white" href="{{ url_for('simple_pages.show', page='page4')}}">Learn More</a>
+                   <center><img src="{{ url_for('static', filename='images/ci-cd.png') }}" class="d-block w-50" height="50" alt="Picture of the git logo"></center>
+				</div>
+			</div>
+		</div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleCaptions" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button> <!--thumbnails-->
+		<div class="carousel-indicators">
+			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleCaptions" type="button">
+                <img class="img-fluid" src="    "></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleCaptions" type="button">
+            <img class="img-fluid" src=></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions" type="button">
+            <img class="img-fluid" src=></button><button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carouselExampleCaptions" type="button">
+            <img class="img-fluid" src=></button><button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carouselExampleCaptions" type="button">
+            <img class="img-fluid" src=></button>
+		</div>
+	</div>
+
+   <div class="overlay-image" style="background-image:url(./);"></div>
+              <div class="container">
+                <h1>About me</h1>
+                <p>My name is Ikechukwu Anyanwu. I am a first year student here at NJIT. I am currently majoring in Information Systems. On my spare time I
+                  enjoy traveling, fitness, and creating different designs and creations for my clothing brand, ParadiseonPluto™. I am looking forward to enhancing
+                  my knowledge and learning new technology in the fields of GitHub, Python/Flask, The Terminal, Heroku and Dockerhub.
+                </p>
+
+
+
+                </a>
+              </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+	</script>
+</body>
+</html>
+
+
+
+</body>
+{% endblock %}
