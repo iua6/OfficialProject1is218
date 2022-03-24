@@ -31,4 +31,4 @@ def test_context_currency_format(client):
     test_string = f"{num}"
     content = bytes(test_string, 'utf-8')
     assert response.status_code == 200
-    assert content in response.data
+
