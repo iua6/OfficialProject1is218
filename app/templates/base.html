@@ -44,9 +44,8 @@
         {% endblock %}
     </div>
     <footer>
-        <p>Environment: {{ deployment_environment }} - {{ year }} <img class="u-image u-image-default u-preserve-proportions u-image-2" src="../static/images/aboutme.jpg" alt="" data-image-width="50" data-image-height="50">By: {{ mymessage }} {{ format_price(10000) }}</p>
-        <div class="u-container-layout u-container-layout-1"><p class="u-text u-text-1">&nbsp;A young programmer, just trying to buy my mom and dad seperate houses. <a href=href="{{ url_for('simple_pages.show', page="About")}}" data-page-id="918311234" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"></a></p>
-        </div>
+        Environment: {{ deployment_environment }} - Copyright: {{ year }}
+        Message: {{ mymessage }} {{ format_price(100) }}
     </footer>
 
 </div>
