@@ -1,0 +1,69 @@
+ {% extends "base.html" %}
+    {% block content %}
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><span class="text-warning">Project</span>1</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page1')}}">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page2')}}">Docker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page3')}}">Python/Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page4')}}">Continuous Integration and Deployment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page5')}}">AAA Testing Tutorial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page6')}}">Calculator Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page7')}}">OOP Glossary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page8')}}">SOLID</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <p>
+
+        <h1>The Calculator Program</h1><br><br>
+
+        <h2>How it demonstrates OOP(Object-Oriented-Programming) principles:</h2><br>The basic principles of OOP involves Abstraction, Encapsulation, Inheritance,
+        and Polymorphism. There are also objects and classes. Together, they stand as the working principle of any object-oriented
+        programming language.The calculator program demonstrates abstraction because the calculator allows you to call seamless programs and functions
+        by just knowing what method to call and what parameters to input. Secondly, the calculator program demonstrates encapsulation when defining
+        classes.Thirdly, the calculator programs exemplifies inheritance because it creates new classes that share the same information
+        as past existing classes. Finally, the calculator program exhibits Polymorphism because it uses a reference to a parent class to
+        affect an object in the child class. We might create a class called “horse” by extending the “animal” class. That class might also
+        implement the “professional racing” class. The “horse” class is “polymorphic,” since it inherits attributes of both the “animal” and
+        “professional racing” class.<br><br>
+
+
+        </p>
+    </div>
+    <div class="col-sm">
+       <img src="{{ url_for('static', filename='images/img_1.png') }}" class="col-md-12 float-md-end mb-3 ms-md-3" alt="...">
+    </div>
+  </div>
+</div>
+
+
+
+
+    {% endblock %}
