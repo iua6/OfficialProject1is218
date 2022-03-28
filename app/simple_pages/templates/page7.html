@@ -37,27 +37,95 @@
                 </div>
             </div>
         </nav>
-    <div class="container">
+<div class="container">
   <div class="row">
-    <div class="col">
-       <p>
-        <h1> Git Branches:</h2>Branching is how git and GitHub manage this timeline, especially when multiple people are working on the project and making changes.
-            A branch is essentially a distinct set of code changes with a distinct name.
-            There can be one or more branches in each repository.
-            The main branch, also known as master, is where all changes are eventually merged back into.
-            This is the official working version of your project, which you can find at github.com/yourname/projectname.
-            Branching is how git and GitHub manage this timeline, especially when multiple people are working on the project and making changes.
-      </p>
+    <div class="col-sm">
+      <p>
+        <h1>OOP Glossary:</h1>
 
-        <h1> Git Branches:How to create a branch in Git</h2>
-    <ul>
-      <li>Step 1: At the top of the app, click Current Branch and then in the list of branches, click the branch that you want to base your new branch on.</li>
-      <li>Step 2: Click New Branch.</li>
-      <li>Step 3: Under Name, type the name of the new branch.</li>
-      <li>Step 4:Use the drop-down to choose a base branch for your new branch.</li>
-      <li>Step 5:Click Create Branch.</li>
-    </ul>
+        <ul>
+            <li>Instantiation- the creation of a object of a given class</li>
+            <li>object- The units of code that are finally created from the process.</li>
+        <li>class- is a blueprint for creating objects ,
+        providing initial values for state , and implementations of behavior.</li>
+            <li>namespace- a declarative region that provides a scope to the identifiers inside it.</li>
+            <li>constructor- is a special method of a class or structure in object-oriented programming that initializes a newly created object of that type.</li>
+        <li>fixture- It is sample data. They allow you to populate your testing database with predefined data before your tests run.
+            type hint- providing hints to function to only accept the given data type.</li>
+        <li>type cast- a way of changing an object from one data type to the next. It is used in computer programming to ensure a function
+            handles the variables correctly.</li>
+            <li>unit test-  Unit testing aims to ensure that each individual part of a program works correct in isolation.</li>
+            <li>static- a member variable of a given class which is shared across all instances (objects),
+                and is accessible as a member variable of these objects.</li>
+            <li>instance method- a method that belongs to instances of a class, not to the class itself.</li>
+            <li>instance property- a Python variable belonging to one, and only one, object.</li>
+            <li>static method- a part of a class definition, but is not part of the objects it creates.</li>
+            <li>static property- are accessed using the Scope Resolution Operator ( :: ) and cannot be accessed through the object operator ( -> ).</li>
+            <li>encapsulation- binding the data and functions which operate on that data into a single unit, the class.</li>
+        <li>inheritance-if a class inherits from another class, it automatically obtains a lot of the same
+            functionality and properties from that class and can be extended to contain separate code and data.</li>
+            <li>polymorphism- polymorphism allows for the uniform treatment of classes in a hierarchy.</li>
+        <li>abstraction-abstracting away the gory implementation details of a class and only presenting a clean
+            and easy-to-use interface via the class’ member functions.</li>
+        </ul>
 
+
+        </p>
+
+        <p><h1>Overview of SOLID:</h1>SOLID is an acronym that stands for five principles that assist software engineers create manageable and adaptable classes.
+        It is an acronym that stands for Single responsibility, Open-closed, Liskov substitution, Interface segregation, and Dependency inversion.
+
+        <br><br><h1>Single Responsibility principle:</h1> A class should have one, and only one, reason to change.
+
+
+        <br><h2>Example:</h2> A ScoreCounter class is only responsible for counting the score of a game according to the scoring rules.
+        This class should only change if the scoring rules change.
+
+        <br><br><h1>Open Closed principle:</h1> You should be able to extend a classes behavior, without modifying it.
+
+
+        <br><h2>Example:</h2> you use an external library which contains a class Car. The Car has a method brake. In its base implementation,
+        this method only slows down the car but you also want to turn on the brake lights. You would create a subclass of Car and override
+        the method brake. After calling the original method of the super class, you can call your own turnOnBrakeLights method.
+        This way you have extended the Car‘s behavior without touching the original class from the library.
+
+        <br><br><h1>Liskov Substitution Principle:</h1> Derived classes must be substitutable for their base classes.
+
+
+        <br><h2>Example:</h2> You have an instance of the class Car which your program uses to perform a drive action.
+        This instance could be replaced by an instance of the class Tesla if Tesla is a subclass of Car.
+
+
+        <br><br><h1>Interface Segregation Principle :</h1> Make fine grained interfaces that are client specific.
+
+
+        <br><h2>Example:</h2> In an adventure game, you have a class for your main character. The player can either be a warrior or an
+        archer or a wizard. Instead of a class which can perform all the actions, like strike, shoot and heal, you would create three
+        different classes, one for each character type. In the end, you would not only have a Character class but also a Warrior, an Archer
+        and a Wizard, all inheriting from Character and implementing their specific actions.
+
+
+        <br><br><h1>Dependency Inversion Principle:</h1> Depend on abstractions, not on concretions.
+
+
+        <br><h2>Example:</h2> A ScoreCounter class is only responsible for counting the score of a game according to the scoring rules.
+        This class should only change if the scoring rules change.Imagine we have a class Distributer which is able to share a blog post on
+        different platforms. According to the Interface Segregation Principle the distributer uses a composition of several instances, like a
+        TwitterShareAction and a FacebookShareAction. Now the goal of the Dependency Inversion Principle is to not depend on concrete methods
+        of the share action classes, like sharePostOnTwitter and sharePostOnFacebook. Instead the Distributer class would define an interface
+        called Sharing which is implemented by TwitterShareAction and FacebookShareAction. It declares the abstract method sharePost.
+        The Distributer class doesn’t have to know the details of the concrete share actions. It just calls the sharePost method.
+
+        </p>
+    </div>
+    <div class="col-sm">
+       <img src="{{ url_for('static', filename='images/img_2.png') }}" class="col-md-12 float-md-end mb-3 ms-md-3" alt="...">
+    </div>
+  </div>
+</div>
+
+
+    {% endblock %}
 
 
 
@@ -136,10 +204,9 @@
     </ul>
       </p>
     </div>
-    <div class="col">
-       <img src="{{ url_for('static', filename='images/github2.png') }}" class="col-md-12 float-md-end mb-3 ms-md-3" alt="...">
 
-    </div>
-  </div>
-</div>
+
+
+
+
     {% endblock %}

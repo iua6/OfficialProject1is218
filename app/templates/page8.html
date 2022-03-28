@@ -1,0 +1,73 @@
+ {% extends "base.html" %}
+    {% block content %}
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><span class="text-warning">Project</span>1</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page1')}}">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page2')}}">Docker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page3')}}">Python/Flask</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page4')}}">Continuous Integration and Deployment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page5')}}">AAA Testing Tutorial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page6')}}">Calculator Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page7')}}">OOP Glossary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('simple_pages.show', page='page8')}}">SOLID</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <p>
+
+        <h1>The Calculator Program in Python</h1><br><br>
+
+        <h2>What it is:</h2>A simple calculator that can add, subtract, multiply or divide depending upon the input from the user.<br><br>
+
+        <h2>How it demonstrates SOLID:</h2>To make your calculator, you'll need various mathematical operators, conditional statements
+        functions and handle user input so it can run efficiently and smooth. The different operators are the process for your output. The process slightly
+        resembles the procedure of SOLID principles. For example, the 'Single Responsibility principle' in SOLID is
+        "a class should have one, and only one reason to change",which entirely means that every class has one responsibility and any change
+        that is made will only alter or effect a certain aspect of the software or technology.<br><br>
+
+        However,a conditional statement is a decision-making process in a programming language is automated using conditional statements,
+        in which Python evaluates the code to see if it meets the specified conditions. The conditions are evaluated and processed as true or false.
+        If this is found to be true, the program is run as needed. Now compare the 'Single Responsibility principle' to a conditional statement
+        you obviously can see they both have terms that must be met for certain outcomes.<br><br>
+
+        In Summary, the SOLID principles are guidelines that can help you create maintainable and extendable classes and systems. And a conditional
+        statements is minimal and concise method for an organized code.
+
+
+        </p>
+    </div>
+    <div class="col-sm">
+       <img src="{{ url_for('static', filename='images/img_3.png') }}" class="col-md-12 float-md-end mb-3 ms-md-3" alt="...">
+    </div>
+  </div>
+</div>
+
+
+    {% endblock %}
