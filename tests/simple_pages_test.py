@@ -44,14 +44,14 @@ def test_request_page5(client):
     response = client.get("/page5")
     assert response.status_code == 200
 
-
 def test_request_page6(client):
     """This makes the index page"""
     response = client.get("/page6")
     assert response.status_code == 200
 
-def test_request_page4(client):
-    """This makes the index page"""
+
+def test_request_page7(client):
+  """This makes the index page"""
     response = client.get("/page7")
     assert response.status_code == 200
 
