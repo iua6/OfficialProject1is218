@@ -51,7 +51,7 @@ def test_request_page6(client):
 
 
 def test_request_page7(client):
-  """This makes the index page"""
+    """This makes the index page"""
     response = client.get("/page7")
     assert response.status_code == 200
 
