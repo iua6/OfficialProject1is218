@@ -1,13 +1,13 @@
 # Project Setup
 
-[![Production Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/prod.yml)
+[![Production Workflow](https://github.com/iua6/OfficialProject1is218/actions/workflows/prod.yml/badge.svg)](https://github.com/iua6/OfficialProject1is218/actions/workflows/prod.yml)
 
-* [Production Deployment](https://kwilliam-prod.herokuapp.com/)
+* [Production Deployment](https://iua6-prod2.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml)
+[![Development Workflow](https://github.com/iua6/OfficialProject1is218/actions/workflows/dev.yml/badge.svg)](https://github.com/iua6/OfficialProject1is218/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://kwilliam-dev.herokuapp.com/)
+* [Developmental Deployment](https://iua6-dev2.herokuapp.com/)
 
 ## Setting up CI/CD
 
@@ -16,11 +16,12 @@ heroku development app/dyno and when you merge or push to master on github, it w
 app/dyno.
 #### Instructions
 
-1. Clone thiss repo to your local   (DO NOT FORK THIS REPO, IF YOU DO YOU HAVE TO ENABLE ACTIONS BEFORE ANYTHING RUNS)
+1. Clone this repo to your local   (DO NOT FORK THIS REPO, IF YOU DO YOU HAVE TO ENABLE ACTIONS BEFORE ANYTHING RUNS)
 2. Create a new repo on your own Github account
 3. Change the origin by replacing it with your own new repo.  (Do not add a readme or any other file while creating the repository)
 4. Create an account with Heroku, create an app for production and an app for development
 5. Create a new repo in the Docker hub.
+#..
 
 #### Setup Docker and Heroku Credentials In the Repository Settings under Action -> Secret
 
